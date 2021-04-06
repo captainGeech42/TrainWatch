@@ -6,14 +6,14 @@
 //
 
 struct Line: Codable, Hashable {
-    var LineCode: String
-    var DisplayName: String
-    var StartStationCode: String
-    var EndStationCode: String
-    var InternalDestination1: String
-    var InternalDestination2: String
+    var lineCode: String
+    var displayName: String
+    var startStationCode: String
+    var endStationCode: String
+    var internalDestination1: String
+    var internalDestination2: String
 }
 
 struct Lines: Codable {
-    var Lines: [Line]
+    var lines: [Line]
 }

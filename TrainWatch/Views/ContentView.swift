@@ -9,11 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Hello, world!")
-                .font(.title)
-                .foregroundColor(.green)
-            Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+        List(lineData, id: \.lineCode) { line in
+            LineRow(line: line)
         }
     }
 }

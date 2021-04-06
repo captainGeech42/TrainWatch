@@ -25,8 +25,9 @@
 		CE060828261A409C00A3C3CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE060827261A409C00A3C3CA /* Preview Assets.xcassets */; };
 		CE33DA8C261BB68A006073BD /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DA8B261BB68A006073BD /* ApiManager.swift */; };
 		CE33DA94261BE6A7006073BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DA93261BE6A7006073BD /* Constants.swift */; };
-		CE33DAA1261C1244006073BD /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAA0261C1244006073BD /* LineView.swift */; };
+		CE33DAA1261C1244006073BD /* LineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAA0261C1244006073BD /* LineRow.swift */; };
 		CE33DAA9261C1385006073BD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAA8261C1385006073BD /* Line.swift */; };
+		CE33DAB5261C190D006073BD /* LineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAB4261C190D006073BD /* LineData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,8 +114,9 @@
 		CE06082A261A409C00A3C3CA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		CE33DA8B261BB68A006073BD /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		CE33DA93261BE6A7006073BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CE33DAA0261C1244006073BD /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		CE33DAA0261C1244006073BD /* LineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineRow.swift; sourceTree = "<group>"; };
 		CE33DAA8261C1385006073BD /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		CE33DAB4261C190D006073BD /* LineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0607E9261A409900A3C3CA /* ContentView.swift */,
-				CE33DAA0261C1244006073BD /* LineView.swift */,
+				CE33DAA0261C1244006073BD /* LineRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				CE33DAA8261C1385006073BD /* Line.swift */,
+				CE33DAB4261C190D006073BD /* LineData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,10 +458,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0607EA261A409900A3C3CA /* ContentView.swift in Sources */,
+				CE33DAB5261C190D006073BD /* LineData.swift in Sources */,
 				CE33DA8C261BB68A006073BD /* ApiManager.swift in Sources */,
 				CE0607E8261A409900A3C3CA /* TrainWatchApp.swift in Sources */,
 				CE33DAA9261C1385006073BD /* Line.swift in Sources */,
-				CE33DAA1261C1244006073BD /* LineView.swift in Sources */,
+				CE33DAA1261C1244006073BD /* LineRow.swift in Sources */,
 				CE33DA94261BE6A7006073BD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

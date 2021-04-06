@@ -32,7 +32,9 @@ func fetchLines(completionHandler: @escaping (Lines) -> Void) {
         
         do {
             if let data = data {
-                let lines = try JSONDecoder().decode(Lines.self, from: data)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = JSONDecoder.KeyDecodingStrategy.convertFromSnakeCase
+                let lines = try decoder.decode(Lines.self, from: data)
 //                print(lines.Lines[0].DisplayName)
                 completionHandler(lines)
             } else {
