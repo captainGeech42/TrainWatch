@@ -11,4 +11,15 @@ struct Constants {
 //        static let apiKey = "e13626d03d8e4c03ac07f95541b3091b" // demo key
         static let apiKey = "b83236a40b25404e85f4d2401cc8c08b" // TrainWatch primary key
     }
+    
+    struct Line {
+        static let abbreviatedMapping = [
+            "RD": "Red",
+            "BL": "Blue",
+            "YL": "Yellow",
+            "OR": "Orange",
+            "GR": "Green",
+            "SV": "Silver"
+        ]
+    }
 }

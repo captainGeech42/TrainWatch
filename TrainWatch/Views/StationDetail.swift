@@ -20,10 +20,17 @@ struct StationDetail: View {
     }
     
     var body: some View {
-        List(dataFromApi?.trains ?? []) { train in
-            TrainPredictionRow(prediction: train)
+        VStack {
+            Text("Incoming trains to \(station.name)")
+            
+            List((dataFromApi?.trains ?? [])
+                    .sorted {
+                        return $0.sortOrder < $1.sortOrder
+                    }) { train in
+                TrainPredictionRow(prediction: train)
+            }
+            .onAppear(perform: getDataFromApi)
         }
-        .onAppear(perform: getDataFromApi)
     }
 }
 

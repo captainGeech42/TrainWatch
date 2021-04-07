@@ -11,10 +11,24 @@ struct TrainPredictionRow: View {
     var prediction: AimPredictionTrainInfo
     
     var body: some View {
-        HStack {
-            Text("Arriving in \(prediction.min) minutes")
+        HStack{
+            Circle()
+                .frame(width: 20, height: 20)
+                .foregroundColor(Color(prediction.color))
             
-            Spacer()
+            VStack {
+                HStack {
+                    Text("\(prediction.lineName) to \(prediction.destinationName)")
+                    
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("Arriving in \(prediction.min) minutes")
+                    
+                    Spacer()
+                }
+            }
         }
     }
 }

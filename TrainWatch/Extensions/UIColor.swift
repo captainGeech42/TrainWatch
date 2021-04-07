@@ -10,6 +10,7 @@ import UIKit
 // based on https://github.com/NormanBitSolace/BlackLabsColor/blob/master/Sources/BlackLabsColor/BlackLabsColor.swift
 extension UIColor {
     // this is used for the line colors in the UI
+    // won't work properly if a new line is introduced
     convenience init(name: String) {
         let mapping: [String: (Double, Double, Double)] = [ // rgb
             "Red": (205, 58, 53),
