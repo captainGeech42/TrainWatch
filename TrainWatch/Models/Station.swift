@@ -28,6 +28,10 @@ struct Station: Codable, Hashable, Identifiable {
     var id: Int {
         code.hashValue
     }
+    
+    var lines: [String] {
+        [lineCode1, lineCode2 ?? "", lineCode3 ?? "", lineCode4 ?? ""]
+    }
 }
 
 struct Stations: Codable {

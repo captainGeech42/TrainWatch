@@ -23,7 +23,11 @@ struct LineDetail: View {
         VStack {
             Text(line.displayName)
             
-            List(dataFromApi?.stations ?? []) { station in
+            List((dataFromApi?.stations ?? [])
+                    .filter { s in
+                        return s.lines.contains(line.lineCode)
+                    }) { station in
+                
                 StationRow(station: station)
             }
             .onAppear(perform: getDataFromApi)
@@ -33,6 +37,6 @@ struct LineDetail: View {
 
 struct LineDetail_Previws: PreviewProvider {
     static var previews: some View {
-        LineDetail(line: lineData[0])
+        LineDetail(line: lineData[0], dataFromApi: Optional(stationsData))
     }
 }
