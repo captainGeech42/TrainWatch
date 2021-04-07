@@ -14,7 +14,7 @@ struct LineRow: View {
         HStack {
             Circle()
                 .frame(width: 20, height: 20)
-                .foregroundColor(.blue)
+                .foregroundColor(Color(line.color))
             
             Text(line.displayName)
             
@@ -26,10 +26,8 @@ struct LineRow: View {
 struct LineRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            LineRow(line: Line(lineCode: "BL", displayName: "Blue", startStationCode: "J03", endStationCode: "G05", internalDestination1: "", internalDestination2: ""))
-            
-            LineRow(line: Line(lineCode: "GR", displayName: "Green", startStationCode: "F11", endStationCode: "E10", internalDestination1: "", internalDestination2: ""))
-
+            LineRow(line: lineData[0])
+            LineRow(line: lineData[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

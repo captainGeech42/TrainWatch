@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var dataFromApi = [Line]()
+    
+    func getLineDataFromApi() {
+        DispatchQueue.main.async {
+            fetchLines { lines in
+                DispatchQueue.main.async {
+                    dataFromApi = lines
+                }
+            }
+        }
+    }
+    
     var body: some View {
-        List(lineData, id: \.lineCode) { line in
+        List(dataFromApi) { line in
             LineRow(line: line)
         }
+        .onAppear(perform: getLineDataFromApi)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(dataFromApi: lineData)
     }
 }

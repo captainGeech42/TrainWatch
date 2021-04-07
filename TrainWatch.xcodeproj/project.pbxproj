@@ -28,6 +28,11 @@
 		CE33DAA1261C1244006073BD /* LineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAA0261C1244006073BD /* LineRow.swift */; };
 		CE33DAA9261C1385006073BD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAA8261C1385006073BD /* Line.swift */; };
 		CE33DAB5261C190D006073BD /* LineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAB4261C190D006073BD /* LineData.swift */; };
+		CE33DABD261C1E12006073BD /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DABC261C1E12006073BD /* UIColor.swift */; };
+		CE33DAC9261CAB2F006073BD /* LineDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAC8261CAB2F006073BD /* LineDetail.swift */; };
+		CE33DAD9261CB260006073BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0607EB261A409A00A3C3CA /* Assets.xcassets */; };
+		CE33DAE5261D6BA2006073BD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAE4261D6BA2006073BD /* String.swift */; };
+		CE33DAEC261D6C34006073BD /* AnyKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAEB261D6C34006073BD /* AnyKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +122,10 @@
 		CE33DAA0261C1244006073BD /* LineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineRow.swift; sourceTree = "<group>"; };
 		CE33DAA8261C1385006073BD /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		CE33DAB4261C190D006073BD /* LineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineData.swift; sourceTree = "<group>"; };
+		CE33DABC261C1E12006073BD /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		CE33DAC8261CAB2F006073BD /* LineDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetail.swift; sourceTree = "<group>"; };
+		CE33DAE4261D6BA2006073BD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CE33DAEB261D6C34006073BD /* AnyKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +187,7 @@
 		CE0607E6261A409900A3C3CA /* TrainWatch */ = {
 			isa = PBXGroup;
 			children = (
+				CE33DABB261C1E05006073BD /* Extensions */,
 				CE33DAA7261C12EF006073BD /* Models */,
 				CE33DA9F261C1221006073BD /* Views */,
 				CE0607E7261A409900A3C3CA /* TrainWatchApp.swift */,
@@ -186,6 +196,7 @@
 				CE0607ED261A409A00A3C3CA /* Preview Content */,
 				CE33DA8B261BB68A006073BD /* ApiManager.swift */,
 				CE33DA93261BE6A7006073BD /* Constants.swift */,
+				CE33DAEB261D6C34006073BD /* AnyKey.swift */,
 			);
 			path = TrainWatch;
 			sourceTree = "<group>";
@@ -254,6 +265,7 @@
 			children = (
 				CE0607E9261A409900A3C3CA /* ContentView.swift */,
 				CE33DAA0261C1244006073BD /* LineRow.swift */,
+				CE33DAC8261CAB2F006073BD /* LineDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +277,15 @@
 				CE33DAB4261C190D006073BD /* LineData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE33DABB261C1E05006073BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE33DABC261C1E12006073BD /* UIColor.swift */,
+				CE33DAE4261D6BA2006073BD /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE33DAD9261CB260006073BD /* Assets.xcassets in Resources */,
 				CE06080F261A409B00A3C3CA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,9 +481,13 @@
 			files = (
 				CE0607EA261A409900A3C3CA /* ContentView.swift in Sources */,
 				CE33DAB5261C190D006073BD /* LineData.swift in Sources */,
+				CE33DAE5261D6BA2006073BD /* String.swift in Sources */,
 				CE33DA8C261BB68A006073BD /* ApiManager.swift in Sources */,
+				CE33DAEC261D6C34006073BD /* AnyKey.swift in Sources */,
 				CE0607E8261A409900A3C3CA /* TrainWatchApp.swift in Sources */,
 				CE33DAA9261C1385006073BD /* Line.swift in Sources */,
+				CE33DABD261C1E12006073BD /* UIColor.swift in Sources */,
+				CE33DAC9261CAB2F006073BD /* LineDetail.swift in Sources */,
 				CE33DAA1261C1244006073BD /* LineRow.swift in Sources */,
 				CE33DA94261BE6A7006073BD /* Constants.swift in Sources */,
 			);
@@ -685,7 +711,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-TrainSVG";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MFQA4Y88MN;
@@ -705,7 +731,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-TrainSVG";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MFQA4Y88MN;
@@ -725,7 +751,7 @@
 		CE060836261A409C00A3C3CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-TrainSVG";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TrainWatch/Preview Content\"";
@@ -748,7 +774,7 @@
 		CE060837261A409C00A3C3CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-TrainSVG";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TrainWatch/Preview Content\"";

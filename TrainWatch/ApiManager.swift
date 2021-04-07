@@ -7,12 +7,12 @@
 
 import Foundation
 
-func fetchLines(completionHandler: @escaping (Lines) -> Void) {
+func fetchLines(completionHandler: @escaping ([Line]) -> Void) {
     let config = URLSessionConfiguration.default
     config.httpAdditionalHeaders = [ "api_key": Constants.Api.apiKey ]
-
+    
     let session = URLSession(configuration: config)
-
+    
     let url = URL(string: Constants.Api.baseUrl + "/Rail.svc/json/jLines")!
     let task = session.dataTask(with: url, completionHandler: { (data, res, error) in
         if let error = error {
@@ -26,21 +26,22 @@ func fetchLines(completionHandler: @escaping (Lines) -> Void) {
             return
         }
         
-    //    if let data = data {
-    //        print(String(data: data, encoding: String.Encoding.utf8) ?? "")
-    //    }
-        
         do {
             if let data = data {
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = JSONDecoder.KeyDecodingStrategy.convertFromSnakeCase
+                decoder.keyDecodingStrategy = .custom { keys in
+                    var key = keys.last!.stringValue
+                    key.lowercaseFirstLetter()
+                    return AnyKey(stringValue: key)!
+                }
+                print(String(data: data, encoding: String.Encoding.utf8) ?? "")
                 let lines = try decoder.decode(Lines.self, from: data)
-//                print(lines.Lines[0].DisplayName)
-                completionHandler(lines)
+                completionHandler(lines.lines)
             } else {
                 print("error")
             }
         } catch {
+            print("broke")
             print(error)
         }
         
