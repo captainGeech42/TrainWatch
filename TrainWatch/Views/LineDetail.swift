@@ -20,17 +20,26 @@ struct LineDetail: View {
     }
     
     var body: some View {
-        VStack {
-            Text(line.displayName)
-            
-            List((dataFromApi?.stations ?? [])
-                    .filter { s in
-                        return s.lines.contains(line.lineCode)
-                    }) { station in
+        NavigationView {
+            VStack {
+                HStack {
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(Color(line.color))
+                    
+                    Text(line.displayName)
+                }
                 
-                StationRow(station: station)
+                List((dataFromApi?.stations ?? [])
+                        .filter { s in
+                            return s.lines.contains(line.lineCode)
+                        }) { station in
+                    NavigationLink(destination: StationDetail(station: station)) {
+                        StationRow(station: station)
+                    }
+                }
+                .onAppear(perform: getDataFromApi)
             }
-            .onAppear(perform: getDataFromApi)
         }
     }
 }

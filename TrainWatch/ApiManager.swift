@@ -62,6 +62,7 @@ struct ApiManager {
         }
     }
     
+    // should prob refactor to use https://developer.wmata.com/docs/services/5476364f031f590f38092507/operations/5476364f031f5909e4fe330e? (JSON - Path Between Stations)
     public static func fetchStations(completionHandler: @escaping (Stations) -> Void) {
         makeApiCall(route: "/Rail.svc/json/jStations") { data in
             let decoder = jsonDecoderFactory()
@@ -70,6 +71,19 @@ struct ApiManager {
                 completionHandler(lines)
             } catch {
                 print("Error decoding jStations return")
+                print(error)
+            }
+        }
+    }
+    
+    public static func fetchTrainPredictions(stationCode: String, completionHandler: @escaping (Trains) -> Void) {
+        makeApiCall(route: "/StationPrediction.svc/json/GetPrediction/" + stationCode) { data in
+            let decoder = jsonDecoderFactory()
+            do {
+                let trains = try decoder.decode(Trains.self, from: data)
+                completionHandler(trains)
+            } catch {
+                print("Error decoding GetPrediction return")
                 print(error)
             }
         }

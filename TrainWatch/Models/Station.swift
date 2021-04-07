@@ -12,6 +12,7 @@ struct Address: Codable, Hashable {
     var zip: String
 }
 
+// https://developer.wmata.com/docs/services/5476364f031f590f38092507/operations/5476364f031f5909e4fe3311?#Station
 struct Station: Codable, Hashable, Identifiable {
     var code: String
     var name: String

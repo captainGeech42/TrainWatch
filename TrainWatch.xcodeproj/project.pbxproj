@@ -36,6 +36,10 @@
 		CE33DAF3261D7162006073BD /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAF2261D7162006073BD /* Station.swift */; };
 		CE33DAFA261D854A006073BD /* StationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAF9261D854A006073BD /* StationRow.swift */; };
 		CE33DB01261D85B1006073BD /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB00261D85B1006073BD /* StationData.swift */; };
+		CE33DB08261D9286006073BD /* TrainPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB07261D9286006073BD /* TrainPrediction.swift */; };
+		CE33DB0F261D9421006073BD /* TrainPredictionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB0E261D9421006073BD /* TrainPredictionData.swift */; };
+		CE33DB16261D967C006073BD /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB15261D967C006073BD /* StationDetail.swift */; };
+		CE33DB1D261D97B4006073BD /* TrainPredictionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB1C261D97B4006073BD /* TrainPredictionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +136,10 @@
 		CE33DAF2261D7162006073BD /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		CE33DAF9261D854A006073BD /* StationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRow.swift; sourceTree = "<group>"; };
 		CE33DB00261D85B1006073BD /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
+		CE33DB07261D9286006073BD /* TrainPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainPrediction.swift; sourceTree = "<group>"; };
+		CE33DB0E261D9421006073BD /* TrainPredictionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainPredictionData.swift; sourceTree = "<group>"; };
+		CE33DB15261D967C006073BD /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
+		CE33DB1C261D97B4006073BD /* TrainPredictionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainPredictionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +281,8 @@
 				CE33DAA0261C1244006073BD /* LineRow.swift */,
 				CE33DAC8261CAB2F006073BD /* LineDetail.swift */,
 				CE33DAF9261D854A006073BD /* StationRow.swift */,
+				CE33DB15261D967C006073BD /* StationDetail.swift */,
+				CE33DB1C261D97B4006073BD /* TrainPredictionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +294,8 @@
 				CE33DAB4261C190D006073BD /* LineData.swift */,
 				CE33DAF2261D7162006073BD /* Station.swift */,
 				CE33DB00261D85B1006073BD /* StationData.swift */,
+				CE33DB07261D9286006073BD /* TrainPrediction.swift */,
+				CE33DB0E261D9421006073BD /* TrainPredictionData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -489,17 +501,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0607EA261A409900A3C3CA /* ContentView.swift in Sources */,
+				CE33DB16261D967C006073BD /* StationDetail.swift in Sources */,
 				CE33DAB5261C190D006073BD /* LineData.swift in Sources */,
 				CE33DAFA261D854A006073BD /* StationRow.swift in Sources */,
+				CE33DB08261D9286006073BD /* TrainPrediction.swift in Sources */,
 				CE33DAE5261D6BA2006073BD /* String.swift in Sources */,
 				CE33DA8C261BB68A006073BD /* ApiManager.swift in Sources */,
 				CE33DAEC261D6C34006073BD /* AnyKey.swift in Sources */,
 				CE0607E8261A409900A3C3CA /* TrainWatchApp.swift in Sources */,
 				CE33DAA9261C1385006073BD /* Line.swift in Sources */,
+				CE33DB1D261D97B4006073BD /* TrainPredictionRow.swift in Sources */,
 				CE33DABD261C1E12006073BD /* UIColor.swift in Sources */,
 				CE33DAC9261CAB2F006073BD /* LineDetail.swift in Sources */,
 				CE33DAA1261C1244006073BD /* LineRow.swift in Sources */,
 				CE33DAF3261D7162006073BD /* Station.swift in Sources */,
+				CE33DB0F261D9421006073BD /* TrainPredictionData.swift in Sources */,
 				CE33DB01261D85B1006073BD /* StationData.swift in Sources */,
 				CE33DA94261BE6A7006073BD /* Constants.swift in Sources */,
 			);

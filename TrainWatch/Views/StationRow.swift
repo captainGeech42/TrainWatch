@@ -16,7 +16,7 @@ struct StationRow: View {
 //                .frame(width: 20, height: 20)
 //                .foregroundColor(Color(line.color))
             
-            Text(station.name)
+            Text("\(station.name) (\(station.code))")
             
             Spacer()
         }
