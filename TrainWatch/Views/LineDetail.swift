@@ -20,26 +20,24 @@ struct LineDetail: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack {
-                    Circle()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(Color(line.color))
-                    
-                    Text(line.displayName)
-                }
+        VStack {
+            HStack {
+                Circle()
+                    .frame(width: 20, height: 20)
+                    .foregroundColor(Color(line.color))
                 
-                List((dataFromApi?.stations ?? [])
-                        .filter { s in
-                            return s.lines.contains(line.lineCode)
-                        }) { station in
-                    NavigationLink(destination: StationDetail(station: station)) {
-                        StationRow(station: station)
-                    }
-                }
-                .onAppear(perform: getDataFromApi)
+                Text(line.displayName)
             }
+            
+            List((dataFromApi?.stations ?? [])
+                    .filter { s in
+                        return s.lines.contains(line.lineCode)
+                    }) { station in
+                NavigationLink(destination: StationDetail(station: station)) {
+                    StationRow(station: station)
+                }
+            }
+            .onAppear(perform: getDataFromApi)
         }
     }
 }

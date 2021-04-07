@@ -23,6 +23,7 @@ struct StationDetail: View {
         List(dataFromApi?.trains ?? []) { train in
             TrainPredictionRow(prediction: train)
         }
+        .onAppear(perform: getDataFromApi)
     }
 }
 
