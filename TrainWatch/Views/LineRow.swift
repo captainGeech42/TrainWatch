@@ -26,8 +26,8 @@ struct LineRow: View {
 struct LineRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            LineRow(line: lineData[0])
-            LineRow(line: lineData[1])
+            LineRow(line: MockData.lineArray[0])
+            LineRow(line: MockData.lineArray[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

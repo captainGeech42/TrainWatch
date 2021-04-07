@@ -26,8 +26,8 @@ struct StationRow: View {
 struct StationRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            StationRow(station: stationData[0])
-            StationRow(station: stationData[1])
+            StationRow(station: MockData.stationArray[0])
+            StationRow(station: MockData.stationArray[1])
 
         }
         .previewLayout(.fixed(width: 300, height: 70))

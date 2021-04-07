@@ -22,8 +22,8 @@ struct TrainPredictionRow: View {
 struct TrainPredictionRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TrainPredictionRow(prediction: predictionData[0])
-            TrainPredictionRow(prediction: predictionData[1])
+            TrainPredictionRow(prediction: MockData.predictionArray[0])
+            TrainPredictionRow(prediction: MockData.predictionArray[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

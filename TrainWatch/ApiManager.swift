@@ -62,7 +62,7 @@ struct ApiManager {
         }
     }
     
-    // should prob refactor to use https://developer.wmata.com/docs/services/5476364f031f590f38092507/operations/5476364f031f5909e4fe330e? (JSON - Path Between Stations)
+    // should prob refactor to use https://developer.wmata.com/docs/services/5476364f031f590f38092507/operations/5476364f031f5909e4fe330e (JSON - Path Between Stations)
     public static func fetchStations(completionHandler: @escaping (Stations) -> Void) {
         makeApiCall(route: "/Rail.svc/json/jStations") { data in
             let decoder = jsonDecoderFactory()

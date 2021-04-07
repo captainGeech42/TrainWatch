@@ -29,6 +29,6 @@ struct StationDetail: View {
 
 struct StationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        StationDetail(station: stationData[0], dataFromApi: Optional(trainsData))
+        StationDetail(station: MockData.stationArray[0], dataFromApi: Optional(MockData.trains))
     }
 }

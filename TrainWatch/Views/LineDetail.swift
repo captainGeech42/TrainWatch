@@ -44,6 +44,6 @@ struct LineDetail: View {
 
 struct LineDetail_Previws: PreviewProvider {
     static var previews: some View {
-        LineDetail(line: lineData[0], dataFromApi: Optional(stationsData))
+        LineDetail(line: MockData.lineArray[0], dataFromApi: Optional(MockData.stations))
     }
 }

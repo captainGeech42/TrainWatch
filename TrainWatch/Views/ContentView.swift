@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var dataFromApi = [Line]()
+    @State var dataFromApi: Lines? = nil
     
     func getDataFromApi() {
         DispatchQueue.main.async {
             ApiManager.fetchLines() { lines in
-                dataFromApi = lines.lines
+                dataFromApi = lines
             }
         }
     }
     
     var body: some View {
         NavigationView {
-            List(dataFromApi) { line in
+            List(dataFromApi?.lines ?? []) { line in
                 NavigationLink(destination: LineDetail(line: line)) {
                     LineRow(line: line)
                 }
@@ -33,6 +33,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(dataFromApi: lineData)
+        ContentView(dataFromApi: Optional(MockData.lines))
     }
 }
