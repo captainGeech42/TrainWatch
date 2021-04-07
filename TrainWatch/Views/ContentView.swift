@@ -10,21 +10,24 @@ import SwiftUI
 struct ContentView: View {
     @State var dataFromApi = [Line]()
     
-    func getLineDataFromApi() {
+    func getDataFromApi() {
         DispatchQueue.main.async {
-            fetchLines { lines in
-                DispatchQueue.main.async {
-                    dataFromApi = lines
-                }
+            ApiManager.fetchLines() { lines in
+                dataFromApi = lines.lines
             }
         }
     }
     
     var body: some View {
-        List(dataFromApi) { line in
-            LineRow(line: line)
+        NavigationView {
+            List(dataFromApi) { line in
+                NavigationLink(destination: LineDetail(line: line)) {
+                    LineRow(line: line)
+                }
+            }
+            .onAppear(perform: getDataFromApi)
         }
-        .onAppear(perform: getLineDataFromApi)
+        .navigationTitle("Metro Lines")
     }
 }
 

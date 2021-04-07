@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct LineDetail: View {
+    var line: Line
+    @State var dataFromApi: Stations? = nil
+    
+    func getDataFromApi() {
+        DispatchQueue.main.async {
+            ApiManager.fetchStations() { stations in
+                dataFromApi = stations
+            }
+        }
+    }
+    
     var body: some View {
-        Text("asdf")
+        VStack {
+            Text(line.displayName)
+            
+            List(dataFromApi?.stations ?? []) { station in
+                StationRow(station: station)
+            }
+            .onAppear(perform: getDataFromApi)
+        }
     }
 }
 
 struct LineDetail_Previws: PreviewProvider {
     static var previews: some View {
-        LineDetail()
+        LineDetail(line: lineData[0])
     }
 }

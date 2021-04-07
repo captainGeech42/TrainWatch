@@ -33,6 +33,9 @@
 		CE33DAD9261CB260006073BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0607EB261A409A00A3C3CA /* Assets.xcassets */; };
 		CE33DAE5261D6BA2006073BD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAE4261D6BA2006073BD /* String.swift */; };
 		CE33DAEC261D6C34006073BD /* AnyKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAEB261D6C34006073BD /* AnyKey.swift */; };
+		CE33DAF3261D7162006073BD /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAF2261D7162006073BD /* Station.swift */; };
+		CE33DAFA261D854A006073BD /* StationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAF9261D854A006073BD /* StationRow.swift */; };
+		CE33DB01261D85B1006073BD /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB00261D85B1006073BD /* StationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +129,9 @@
 		CE33DAC8261CAB2F006073BD /* LineDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetail.swift; sourceTree = "<group>"; };
 		CE33DAE4261D6BA2006073BD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE33DAEB261D6C34006073BD /* AnyKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyKey.swift; sourceTree = "<group>"; };
+		CE33DAF2261D7162006073BD /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		CE33DAF9261D854A006073BD /* StationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRow.swift; sourceTree = "<group>"; };
+		CE33DB00261D85B1006073BD /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +272,7 @@
 				CE0607E9261A409900A3C3CA /* ContentView.swift */,
 				CE33DAA0261C1244006073BD /* LineRow.swift */,
 				CE33DAC8261CAB2F006073BD /* LineDetail.swift */,
+				CE33DAF9261D854A006073BD /* StationRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +282,8 @@
 			children = (
 				CE33DAA8261C1385006073BD /* Line.swift */,
 				CE33DAB4261C190D006073BD /* LineData.swift */,
+				CE33DAF2261D7162006073BD /* Station.swift */,
+				CE33DB00261D85B1006073BD /* StationData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -481,6 +490,7 @@
 			files = (
 				CE0607EA261A409900A3C3CA /* ContentView.swift in Sources */,
 				CE33DAB5261C190D006073BD /* LineData.swift in Sources */,
+				CE33DAFA261D854A006073BD /* StationRow.swift in Sources */,
 				CE33DAE5261D6BA2006073BD /* String.swift in Sources */,
 				CE33DA8C261BB68A006073BD /* ApiManager.swift in Sources */,
 				CE33DAEC261D6C34006073BD /* AnyKey.swift in Sources */,
@@ -489,6 +499,8 @@
 				CE33DABD261C1E12006073BD /* UIColor.swift in Sources */,
 				CE33DAC9261CAB2F006073BD /* LineDetail.swift in Sources */,
 				CE33DAA1261C1244006073BD /* LineRow.swift in Sources */,
+				CE33DAF3261D7162006073BD /* Station.swift in Sources */,
+				CE33DB01261D85B1006073BD /* StationData.swift in Sources */,
 				CE33DA94261BE6A7006073BD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
