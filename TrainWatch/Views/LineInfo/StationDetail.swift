@@ -19,15 +19,24 @@ struct StationDetail: View {
         }
     }
     
-    var body: some View {
-        VStack {
+    var body: some View {        
+        return VStack {
             Text("Incoming trains to \(station.name)")
             
             List((dataFromApi?.trains ?? [])
                     .sorted {
                         return $0.sortOrder < $1.sortOrder
                     }) { train in
-                TrainPredictionRow(prediction: train)
+                
+                var showDetails = false
+                
+                let tap = TapGesture()
+                    .onEnded {
+                        showDetails = !showDetails
+                    }
+                
+                TrainPredictionRow(prediction: train, showDetails: showDetails)
+                    .gesture(tap)
             }
             .onAppear(perform: getDataFromApi)
         }

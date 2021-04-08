@@ -41,8 +41,26 @@ struct AimPredictionTrainInfo: Codable, Hashable, Identifiable {
         }
     }
     
+    // used to show the line color for the train
     var color: UIColor {
         UIColor(name: lineName)
+    }
+    
+    // this is used to show the train status in the TrainPredictionRow view
+    var message: String {
+        switch (min) {
+        case "ARR":
+            return "Arriving now"
+        case "BRD":
+            return "Boarding now"
+        default:
+            switch (sortOrder) {
+            case 99:
+                return "ETA unavailable"
+            default:
+                return "Arriving in \(min) minutes"
+            }
+        }
     }
 }
 

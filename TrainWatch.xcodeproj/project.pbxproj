@@ -38,6 +38,8 @@
 		CE33DB16261D967C006073BD /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB15261D967C006073BD /* StationDetail.swift */; };
 		CE33DB1D261D97B4006073BD /* TrainPredictionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB1C261D97B4006073BD /* TrainPredictionRow.swift */; };
 		CE33DB24261DFCE3006073BD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB23261DFCE3006073BD /* MockData.swift */; };
+		CE8F7BD9261EBBBA0062412B /* LineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F7BD8261EBBBA0062412B /* LineInfoView.swift */; };
+		CE8F7BF1261EC08D0062412B /* StationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F7BF0261EC08D0062412B /* StationMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,8 @@
 		CE33DB15261D967C006073BD /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
 		CE33DB1C261D97B4006073BD /* TrainPredictionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainPredictionRow.swift; sourceTree = "<group>"; };
 		CE33DB23261DFCE3006073BD /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		CE8F7BD8261EBBBA0062412B /* LineInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoView.swift; sourceTree = "<group>"; };
+		CE8F7BF0261EC08D0062412B /* StationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,12 +277,9 @@
 		CE33DA9F261C1221006073BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE8F7BEF261EBFBC0062412B /* StationMap */,
+				CE8F7BDF261EBBC10062412B /* LineInfo */,
 				CE0607E9261A409900A3C3CA /* ContentView.swift */,
-				CE33DAA0261C1244006073BD /* LineRow.swift */,
-				CE33DAC8261CAB2F006073BD /* LineDetail.swift */,
-				CE33DAF9261D854A006073BD /* StationRow.swift */,
-				CE33DB15261D967C006073BD /* StationDetail.swift */,
-				CE33DB1C261D97B4006073BD /* TrainPredictionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +302,27 @@
 				CE33DAE4261D6BA2006073BD /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE8F7BDF261EBBC10062412B /* LineInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CE8F7BD8261EBBBA0062412B /* LineInfoView.swift */,
+				CE33DAA0261C1244006073BD /* LineRow.swift */,
+				CE33DAC8261CAB2F006073BD /* LineDetail.swift */,
+				CE33DAF9261D854A006073BD /* StationRow.swift */,
+				CE33DB15261D967C006073BD /* StationDetail.swift */,
+				CE33DB1C261D97B4006073BD /* TrainPredictionRow.swift */,
+			);
+			path = LineInfo;
+			sourceTree = "<group>";
+		};
+		CE8F7BEF261EBFBC0062412B /* StationMap */ = {
+			isa = PBXGroup;
+			children = (
+				CE8F7BF0261EC08D0062412B /* StationMapView.swift */,
+			);
+			path = StationMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8F7BF1261EC08D0062412B /* StationMapView.swift in Sources */,
 				CE0607EA261A409900A3C3CA /* ContentView.swift in Sources */,
 				CE33DB16261D967C006073BD /* StationDetail.swift in Sources */,
 				CE33DAFA261D854A006073BD /* StationRow.swift in Sources */,
@@ -503,6 +526,7 @@
 				CE33DAEC261D6C34006073BD /* AnyKey.swift in Sources */,
 				CE33DB24261DFCE3006073BD /* MockData.swift in Sources */,
 				CE0607E8261A409900A3C3CA /* TrainWatchApp.swift in Sources */,
+				CE8F7BD9261EBBBA0062412B /* LineInfoView.swift in Sources */,
 				CE33DAA9261C1385006073BD /* Line.swift in Sources */,
 				CE33DB1D261D97B4006073BD /* TrainPredictionRow.swift in Sources */,
 				CE33DABD261C1E12006073BD /* UIColor.swift in Sources */,
