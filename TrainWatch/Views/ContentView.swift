@@ -12,14 +12,14 @@ struct ContentView: View {
         TabView {
             LineInfoView()
                 .tabItem {
-                    Image(systemName: "1.square.fill")
-                    Text("asdf")
+                    Image(systemName: "tram")
+                    Text("Lines")
                 }
             
             StationMapView()
                 .tabItem {
-                    Image(systemName: "2.square.fill")
-                    Text("asdf2")
+                    Image(systemName: "map")
+                    Text("Map")
                 }
         }
     }
@@ -28,6 +28,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//        ContentView(dataFromApi: Optional(MockData.lines))
     }
 }

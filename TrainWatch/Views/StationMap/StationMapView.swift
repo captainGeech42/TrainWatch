@@ -15,8 +15,8 @@ struct StationMapView: View {
             longitude: -77.043447
         ),
         span: MKCoordinateSpan(
-            latitudeDelta: 0.1,
-            longitudeDelta: 0.1
+            latitudeDelta: 0.2,
+            longitudeDelta: 0.2
         )
     )
     
