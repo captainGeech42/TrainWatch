@@ -16,7 +16,6 @@
 		CE06080A261A409A00A3C3CA /* TrainWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE060809261A409A00A3C3CA /* TrainWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE06080F261A409B00A3C3CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE06080E261A409B00A3C3CA /* Assets.xcassets */; };
 		CE060816261A409B00A3C3CA /* TrainWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE060815261A409B00A3C3CA /* TrainWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CE06081B261A409B00A3C3CA /* TrainWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06081A261A409B00A3C3CA /* TrainWatchApp.swift */; };
 		CE06081D261A409B00A3C3CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06081C261A409B00A3C3CA /* ContentView.swift */; };
 		CE06081F261A409B00A3C3CA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06081E261A409B00A3C3CA /* NotificationController.swift */; };
 		CE060821261A409B00A3C3CA /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060820261A409B00A3C3CA /* NotificationView.swift */; };
@@ -40,6 +39,22 @@
 		CE33DB24261DFCE3006073BD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB23261DFCE3006073BD /* MockData.swift */; };
 		CE8F7BD9261EBBBA0062412B /* LineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F7BD8261EBBBA0062412B /* LineInfoView.swift */; };
 		CE8F7BF1261EC08D0062412B /* StationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F7BF0261EC08D0062412B /* StationMapView.swift */; };
+		CE8F7BFC262188180062412B /* TrainPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB07261D9286006073BD /* TrainPrediction.swift */; };
+		CE8F7BFD262188180062412B /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAF2261D7162006073BD /* Station.swift */; };
+		CE8F7BFE262188180062412B /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB23261DFCE3006073BD /* MockData.swift */; };
+		CE8F7BFF262188180062412B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAA8261C1385006073BD /* Line.swift */; };
+		CE8F7C05262188280062412B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAE4261D6BA2006073BD /* String.swift */; };
+		CE8F7C06262188280062412B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DABC261C1E12006073BD /* UIColor.swift */; };
+		CE8F7C0C262189320062412B /* LineDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAC8261CAB2F006073BD /* LineDetail.swift */; };
+		CE8F7C0D262189320062412B /* StationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAF9261D854A006073BD /* StationRow.swift */; };
+		CE8F7C0E262189320062412B /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB15261D967C006073BD /* StationDetail.swift */; };
+		CE8F7C0F262189320062412B /* LineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAA0261C1244006073BD /* LineRow.swift */; };
+		CE8F7C10262189320062412B /* LineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F7BD8261EBBBA0062412B /* LineInfoView.swift */; };
+		CE8F7C11262189320062412B /* TrainPredictionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DB1C261D97B4006073BD /* TrainPredictionRow.swift */; };
+		CE8F7C1C262189650062412B /* TrainWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0607E7261A409900A3C3CA /* TrainWatchApp.swift */; };
+		CE8F7C22262189950062412B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DA8B261BB68A006073BD /* ApiManager.swift */; };
+		CE8F7C23262189950062412B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DA93261BE6A7006073BD /* Constants.swift */; };
+		CE8F7C24262189950062412B /* AnyKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33DAEB261D6C34006073BD /* AnyKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +130,6 @@
 		CE06080E261A409B00A3C3CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE060810261A409B00A3C3CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE060815261A409B00A3C3CA /* TrainWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TrainWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE06081A261A409B00A3C3CA /* TrainWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainWatchApp.swift; sourceTree = "<group>"; };
 		CE06081C261A409B00A3C3CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE06081E261A409B00A3C3CA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		CE060820261A409B00A3C3CA /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -253,7 +267,6 @@
 		CE060819261A409B00A3C3CA /* TrainWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CE06081A261A409B00A3C3CA /* TrainWatchApp.swift */,
 				CE06081C261A409B00A3C3CA /* ContentView.swift */,
 				CE06081E261A409B00A3C3CA /* NotificationController.swift */,
 				CE060820261A409B00A3C3CA /* NotificationView.swift */,
@@ -558,10 +571,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE06081F261A409B00A3C3CA /* NotificationController.swift in Sources */,
+				CE8F7C23262189950062412B /* Constants.swift in Sources */,
+				CE8F7C0F262189320062412B /* LineRow.swift in Sources */,
 				CE06081D261A409B00A3C3CA /* ContentView.swift in Sources */,
+				CE8F7C0D262189320062412B /* StationRow.swift in Sources */,
+				CE8F7C0E262189320062412B /* StationDetail.swift in Sources */,
+				CE8F7C05262188280062412B /* String.swift in Sources */,
 				CE060823261A409B00A3C3CA /* ComplicationController.swift in Sources */,
-				CE06081B261A409B00A3C3CA /* TrainWatchApp.swift in Sources */,
+				CE8F7BFC262188180062412B /* TrainPrediction.swift in Sources */,
+				CE8F7C11262189320062412B /* TrainPredictionRow.swift in Sources */,
+				CE8F7C0C262189320062412B /* LineDetail.swift in Sources */,
+				CE8F7C22262189950062412B /* ApiManager.swift in Sources */,
+				CE8F7C1C262189650062412B /* TrainWatchApp.swift in Sources */,
+				CE8F7BFE262188180062412B /* MockData.swift in Sources */,
+				CE8F7C06262188280062412B /* UIColor.swift in Sources */,
+				CE8F7C10262189320062412B /* LineInfoView.swift in Sources */,
+				CE8F7C24262189950062412B /* AnyKey.swift in Sources */,
+				CE8F7BFF262188180062412B /* Line.swift in Sources */,
 				CE060821261A409B00A3C3CA /* NotificationView.swift in Sources */,
+				CE8F7BFD262188180062412B /* Station.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
